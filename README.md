@@ -1,5 +1,7 @@
 # AANet
 
+<img src="imgs/demo.gif">
+
 PyTorch implementation of our paper: 
 
 **[AANet: Adaptive Aggregation Network for Efficient Stereo Matching](https://arxiv.org/abs/2004.09548)**, [CVPR 2020](http://cvpr2020.thecvf.com/)
@@ -100,7 +102,7 @@ To generate prediction results on the test set of Scene Flow and KITTI dataset, 
 The following works for quick testing
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python inference.py --mode test --data_dir ~/KITTI/data_scene_flow/ --dataset_name KITTI2015 --pretrained_aanet pretrained/aanet+_kitti15-2075aea1.pth --batch_size 1 --img_height 384 --img_width 1248 --feature_type aanet --feature_pyramid_network --no_intermediate_supervision --output_dir output/kitti15_test
+CUDA_VISIBLE_DEVICES=0 python inference.py --mode test --data_dir ~/KITTI/data_scene_flow/ --dataset_name KITTI2015 --pretrained_aanet pretrained/aanet+_sceneflow-d3e13ef0.pth --batch_size 1 --img_height 384 --img_width 1248 --feature_type aanet --feature_pyramid_network --no_intermediate_supervision --output_dir output/kitti15_test
 ```
 
 The inference results on KITTI dataset can be directly submitted to the online evaluation server for benchmarking.
